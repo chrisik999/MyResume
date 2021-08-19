@@ -28,7 +28,6 @@ app.post("/contact", (req, res) => {
         
         } else {
             mail(req);
-            console.log(response);
             return res.status(200).json({message: "success", user: newUser});
         }
     })
