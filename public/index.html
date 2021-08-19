@@ -311,7 +311,6 @@
         e.preventDefault();
         const formData = new FormData(form);
         const formDataSerialized = Object.fromEntries(formData);
-        console.log(formDataSerialized);
         const jsonObject = formDataSerialized;
         try {
           const response = await fetch(url, {
