@@ -12,9 +12,9 @@ const transport = nodemailer.createTransport({
 module.exports =  (req, res) => {
     const user = req.body;
     var mailOptions = {
-        from: 'Ajaero Christian',
+        from: config.email,
         to: user.email,
-        subject:'Order Received',
+        subject:'Your Message Was Received',
         text: 'Dear '+ user.name + ',' +'\n'+'\t'+'Your message has been received and we will get back to you shortly.'
     }
     
@@ -23,4 +23,3 @@ module.exports =  (req, res) => {
         else console.log('Email Sent ' + info.response);
     })
 }
-

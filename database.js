@@ -1,5 +1,6 @@
 const mongoose = require ('mongoose');
-const dbUri = "mongodb://localhost:27017/contact";
+const config = require('./config');
+const dbUri = config.mongoUri;
 
 module.exports = function () {
     mongoose.connect(dbUri, {
